@@ -6,9 +6,9 @@ public abstract class Tree {
 
 	private Node root;
 	
-	public abstract void insert(int key);
-	public abstract void remove(int key);
-	public abstract Node search(Node node, int key);
+	public abstract void insert(String key);
+	public abstract void remove(String key);
+	public abstract Node search(Node node, String key);
 	
 	public void order(Node node){
 		if (node != null){

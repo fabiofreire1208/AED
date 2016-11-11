@@ -11,15 +11,15 @@ public class NodeRBT extends Node{
 		super();
 	}
 	
-	public NodeRBT(int key){
+	public NodeRBT(String key){
 		super(key);
 	}
 	
-	public NodeRBT(int key, Node father){
+	public NodeRBT(String key, Node father){
 		super(key, father);
 	}
 	
-	public NodeRBT(int key, Node subTreeLeft, Node subTreeRight){
+	public NodeRBT(String key, Node subTreeLeft, Node subTreeRight){
 		super(key, subTreeLeft, subTreeRight);
 	}
 	
@@ -27,7 +27,7 @@ public class NodeRBT extends Node{
 		super(subTreeLeft, subTreeRight, father);
 	}
 	
-	public NodeRBT(int key, Node subTreeLeft, Node subTreeRight, Node father){
+	public NodeRBT(String key, Node subTreeLeft, Node subTreeRight, Node father){
 		super(key, subTreeLeft, subTreeRight, father);
 	}
 

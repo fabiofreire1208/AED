@@ -6,23 +6,23 @@ package br.com.macario.aed.nodes;
  */
 public class Node {
 	
-	private int key;
+	private String key;
 	private Node subTreeLeft;
 	private Node subTreeRight;
 	private Node father;
 	
 	public Node(){}
 	
-	public Node(int key){
+	public Node(String key){
 		this.key = key;
 	}
 	
-	public Node(int key, Node father){
+	public Node(String key, Node father){
 		this.key = key;
 		this.father = father;
 	}
 	
-	public Node(int key, Node subTreeLeft, Node subTreeRight){
+	public Node(String key, Node subTreeLeft, Node subTreeRight){
 		this.key = key;
 		this.subTreeLeft = subTreeLeft;
 		this.subTreeRight = subTreeRight;
@@ -34,17 +34,17 @@ public class Node {
 		this.father = father;
 	}
 	
-	public Node(int key, Node subTreeLeft, Node subTreeRight, Node father){
+	public Node(String key, Node subTreeLeft, Node subTreeRight, Node father){
 		this.key = key;
 		this.subTreeLeft = subTreeLeft;
 		this.subTreeRight = subTreeRight;
 		this.father = father;
 	}
 	
-	public int getKey() {
+	public String getKey() {
 		return key;
 	}
-	public void setKey(int key) {
+	public void setKey(String key) {
 		this.key = key;
 	}
 	public Node getSubTreeLeft() {
@@ -64,5 +64,7 @@ public class Node {
 	}
 	public void setFather(Node father) {
 		this.father = father;
-	}	
+	}
+	
+	
 }

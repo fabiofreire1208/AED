@@ -13,15 +13,19 @@ public class BST extends Tree{
 	}
 	
 	@Override
-	public Node search(Node node, int key) {
-		if (node != null && node.getKey() == key){
+	public Node search(Node node, String key) {
+		if (node != null && compareStringNodes(node, key) == 0){
 			return node;
-		} else if (node != null && node.getKey() > key){
+		} else if (node != null && (compareStringNodes(node, key) > 0)){
 			return search(node.getSubTreeLeft(),key);
-		} else if (node != null && node.getKey() <= key) {
+		} else if (node != null && compareStringNodes(node, key) < 0) {
 			return search(node.getSubTreeRight(),key);
 		}
 		return node;
+	}
+	
+	public int compareStringNodes(Node node, String key){
+		return node.getKey().compareTo(key);
 	}
 	
 	public Node minimum(Node node){
@@ -59,13 +63,13 @@ public class BST extends Tree{
 	}
 	
 	@Override
-	public void insert(int key){
+	public void insert(String key){
 		Node fatherNode = null;
 		Node node = getRoot();
 		Node newNode = new Node(key,null, null);
 		while (node != null){
 			fatherNode = node;
-			if (newNode.getKey() > node.getKey()){
+			if (compareStringNodes(newNode, node.getKey()) > 0){
 				node = node.getSubTreeRight();
 			} else {
 				node = node.getSubTreeLeft();
@@ -74,7 +78,7 @@ public class BST extends Tree{
 		newNode.setFather(fatherNode);
 		if (fatherNode == null) {
 			setRoot(newNode);
-		} else if (newNode.getKey() > fatherNode.getKey()){
+		} else if (compareStringNodes(newNode, fatherNode.getKey()) > 0){
 			fatherNode.setSubTreeRight(newNode);
 		} else {
 			fatherNode.setSubTreeLeft(newNode);
@@ -95,7 +99,7 @@ public class BST extends Tree{
 	}
 	
 	@Override
-	public void remove(int key){
+	public void remove(String key){
 		if (getRoot() != null) {
 			Node node = search(getRoot(), key);
 			if (node != null) {
@@ -117,5 +121,6 @@ public class BST extends Tree{
 			}
 		}
 	}
+
 	
 }

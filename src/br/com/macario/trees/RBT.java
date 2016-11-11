@@ -10,19 +10,19 @@ import br.com.macario.aed.nodes.Node;
 public class RBT extends BST{
 	
 	@Override
-	public Node search(Node node, int key) {
+	public Node search(Node node, String key) {
 		// TODO Auto-generated method stub
 		return super.search(node, key);
 	}
 	
 	@Override
-	public void insert(int key) {
+	public void insert(String key) {
 		// TODO Auto-generated method stub
 		super.insert(key);
 	}
 	
 	@Override
-	public void remove(int key) {
+	public void remove(String key) {
 		// TODO Auto-generated method stub
 		super.remove(key);
 	}
