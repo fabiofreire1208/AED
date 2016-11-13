@@ -10,7 +10,7 @@ public class MainBST {
 		bst.insert("fabiana");
 		bst.insert("fora");
 		bst.insert("fuera");
-		bst.insert("força");
+		bst.insert("forï¿½a");
 		bst.insert("fui");
 		bst.insert("foi");
 		bst.insert("fostes");
@@ -28,7 +28,6 @@ public class MainBST {
 //		bst.insert(4);
 //		
 		bst.order(bst.getRoot());
-		
 //		
 //		bst.remove(18);
 //		bst.remove(3);
