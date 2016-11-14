@@ -7,8 +7,13 @@ public class NodeRBT extends Node{
 	
 	private int color;
 	
+	
+	
 	public NodeRBT(){
-		super();
+		setColor(BLACK);
+		setFather(null);
+		setSubTreeLeft(null);
+		setSubTreeRight(null);
 	}
 	
 	public NodeRBT(String key){
@@ -38,5 +43,6 @@ public class NodeRBT extends Node{
 	public void setColor(int color) {
 		this.color = color;
 	}
+	
 
 }

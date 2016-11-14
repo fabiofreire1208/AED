@@ -3,17 +3,15 @@ package br.com.macario.trees;
 public class MainBST {
 
 	public static void main(String[] args) {
-		Tree bst = new BST();
+		RBT bst = new RBT();
 		
-		bst.insert("fabio");
-		bst.insert("fabi");
-		bst.insert("fabiana");
-		bst.insert("fora");
-		bst.insert("fuera");
-		bst.insert("for�a");
-		bst.insert("fui");
-		bst.insert("foi");
-		bst.insert("fostes");
+		bst.insert("cavalo");
+		bst.insert("fortuito");
+		bst.insert("malaria");
+		bst.insert("drone");
+		bst.insert("facao");
+		bst.insert("esperanca");
+		bst.insert("doido");
 		
 //		bst.insert(15);
 //		bst.insert(18);
@@ -27,11 +25,13 @@ public class MainBST {
 //		bst.insert(2);
 //		bst.insert(4);
 //		
-		bst.order(bst.getRoot());
+		
 //		
 //		bst.remove(18);
 //		bst.remove(3);
 //		
-//		bst.order(bst.getRoot());
+		bst.rbPrint(bst.getRoot());
+//		bst.getRoot();
+		
 	}
 }
